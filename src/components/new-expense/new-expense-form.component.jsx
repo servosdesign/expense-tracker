@@ -48,7 +48,7 @@ const ExpenseForm = props => {
     
     const expenseData = {
       title: userInput.enteredTitle,
-      amount: userInput.enteredAmount,
+      amount: +userInput.enteredAmount,
       date: new Date(userInput.enteredDate + 'T00:00:00')
     };
 
@@ -78,6 +78,7 @@ const ExpenseForm = props => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={props.onCancel}>Cancel</button>
         <button type='submit'>Add Expense</button>
       </div>
     </form>
