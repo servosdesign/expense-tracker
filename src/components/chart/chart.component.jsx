@@ -1,4 +1,4 @@
-import ChartBar from './chart-bar.component';
+import ChartBar from './chart-bar/chart-bar.component';
 
 import './chart.styles.css';
 

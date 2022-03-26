@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import ExpenseForm from './new-expense-form.component';
+import ExpenseForm from './new-expense-form/new-expense-form.component';
 
 import './new-expense.styles.css';
 
