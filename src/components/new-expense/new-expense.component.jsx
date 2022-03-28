@@ -2,8 +2,7 @@ import { useState } from 'react';
 
 import ExpenseForm from './new-expense-form/new-expense-form.component';
 
-import './new-expense.styles.css';
-import { NewExpenseDiv, NewExpenseBtn } from './new-expense.styles';
+import { NewExpenseDiv } from './new-expense.styles';
 
 const NewExpense = props => {
   const [isEditing, setIsEditing] = useState(false);
