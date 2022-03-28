@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ExpenseForm from './new-expense-form/new-expense-form.component';
 
 import './new-expense.styles.css';
+import { NewExpenseDiv, NewExpenseBtn } from './new-expense.styles';
 
 const NewExpense = props => {
   const [isEditing, setIsEditing] = useState(false);
@@ -25,12 +26,12 @@ const NewExpense = props => {
   };
 
   return (
-    <div className='new-expense'>
+    <NewExpenseDiv>
       {!isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
       {isEditing && <ExpenseForm
         onSaveExpenseData={saveExpenseDataHandler}
         onCancel={stopEditingHanlder} />}
-    </div>
+    </NewExpenseDiv>
   );
 };
 

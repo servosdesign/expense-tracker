@@ -1,16 +1,16 @@
 import ExpenseItem from '../expense-item/expense-item.component';
 
-import './expenses-list.styles.css';
+import { ExpensesListDiv, ExpensesListFallback } from './expenses-list.styles';
 
 const ExpenseList = props => {
   if (props.items.length === 0) {
     return (
-      <h2 className='expenses-list__fallback'>Found No Expenses.</h2>
+      <ExpensesListFallback>Found No Expenses.</ExpensesListFallback>
     )
   };
 
   return (
-    <ul className='expenses-list'>
+    <ExpensesListDiv>
       {props.items.map((expense) => (
         <ExpenseItem
           key={expense.id}
@@ -19,7 +19,7 @@ const ExpenseList = props => {
           date={expense.date}
         />
       ))}
-    </ul>
+    </ExpensesListDiv>
   )
 };
 
